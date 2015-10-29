@@ -1,0 +1,17 @@
+filetype indent on
+set autoindent
+
+" turn on line numbering
+set number
+
+" set syntax on
+syntax on
+
+"highlight search
+set hls
+
+"wrap text
+set lbr
+
+"change colorscheme
+"colorscheme delek
