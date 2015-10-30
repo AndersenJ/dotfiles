@@ -15,3 +15,6 @@ set lbr
 
 "change colorscheme
 "colorscheme delek
+
+"tab width of 4
+set tabstop=4
