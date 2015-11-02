@@ -18,3 +18,8 @@ set lbr
 
 "tab width of 4
 set tabstop=4
+
+"set paste to f2
+set pastetoggle=<F2>
+
+set background=dark
