@@ -23,3 +23,6 @@ set tabstop=4
 set pastetoggle=<F2>
 
 set background=dark
+
+" this is for eclim compatibility
+set nocompatible
