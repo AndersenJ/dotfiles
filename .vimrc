@@ -26,3 +26,4 @@ set background=dark
 
 " this is for eclim compatibility
 set nocompatible
+filetype plugin indent on
