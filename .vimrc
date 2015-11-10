@@ -27,3 +27,12 @@ set background=dark
 " this is for eclim compatibility
 set nocompatible
 filetype plugin indent on
+
+" always know the location of the cursor
+set ruler
+
+" no annoying sounds when errors happen
+set noerrorbells
+
+" something something regular expressions
+set magic
