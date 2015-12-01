@@ -1,4 +1,22 @@
-filetype indent on
+" needed to run vundle{
+set nocompatible
+filetype plugin indent off
+syntax off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"list of plugins
+"to install/update/delete a plugin, add it here and run
+":PluginInstall/:PluginUpdate/:PluginClean
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'Valloric/YourCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+
+call vundle#end()
+"}
+
+filetype plugin indent on
 set autoindent
 
 " turn on line numbering
