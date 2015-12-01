@@ -12,10 +12,18 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
+Plugin 'hail2u/vim-css3-syntax.git'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 "}
+"Note that Valloric needs to be compiled. There may also be other plugins that
+"require additional setup.
 
 filetype plugin indent on
 set autoindent
@@ -33,7 +41,12 @@ set hls
 set lbr
 
 "change colorscheme
-"colorscheme delek
+colo ansi_blows
+"colo af
+"colo candy
+"colo basic
+"colo buttercream
+"colo turbo
 
 "tab width of 4
 set tabstop=4
@@ -65,3 +78,6 @@ set magic
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
+
+" Autocomplete for CSS
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS

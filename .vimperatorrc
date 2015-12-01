@@ -1,7 +1,10 @@
 "3.10.1 (created: 2015/08/25 00:41:59)
 
+nnoremap k 5k
+nnoremap j 5j
 noremap l gt
 noremap h gT
+set defsearch=google
 source! /home/johnathan/.vimperatorrc.local
 
 " vim: set ft=vimperator:
