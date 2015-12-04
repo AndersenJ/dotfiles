@@ -1,3 +1,4 @@
+" to install Vundle, run git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " needed to run vundle{
 set nocompatible
 filetype plugin indent off
@@ -9,6 +10,7 @@ call vundle#begin()
 ":PluginInstall/:PluginUpdate/:PluginClean
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -81,3 +83,6 @@ set magic
 
 " Autocomplete for CSS
 "autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" make NerdTree hotkey
+map <C-n> :NERDTreeToggle<CR>
