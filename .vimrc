@@ -30,7 +30,12 @@ Plugin 'molok/vim-smartusline'
 
 call vundle#end()
 "}
-"Note that Valloric needs to be compiled. There may also be other plugins that
+"Note that Valloric YouCompleteMe needs to be compiled. Use:
+"First, install cmake, python, nodejs, and npm
+"cd ~/.vim/bundle/YouCompleteMe
+"./install.py --clang-completer --omnisharp-completer --gocode-completer
+"--tern-completer
+"There may also be other plugins that
 "require additional setup.
 
 filetype plugin indent on
