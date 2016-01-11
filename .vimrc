@@ -9,7 +9,6 @@ call vundle#begin()
 "to install/update/delete a plugin, add it here and run
 ":PluginInstall/:PluginUpdate/:PluginClean
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/syntastic.git'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ternjs/tern_for_vim'
@@ -54,6 +53,7 @@ set hls
 set lbr
 
 "change colorscheme
+set t_Co=256
 colo ansi_blows
 "colo af
 "colo candy
@@ -68,10 +68,6 @@ set tabstop=4
 set pastetoggle=<F2>
 
 set background=dark
-
-" this is for eclim compatibility
-set nocompatible
-filetype plugin indent on
 
 " always know the location of the cursor
 set ruler
@@ -97,3 +93,8 @@ set magic
 
 " make NerdTree hotkey
 map <C-n> :NERDTreeToggle<CR>
+
+" for gdb integration, use pyclewn.
+" sudo pip install pyclewn
+" python -c "import clewn; clewn.get_vimball()"
+" vim -S pyclewn-2.2.vmb
