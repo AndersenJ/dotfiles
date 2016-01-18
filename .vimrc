@@ -27,6 +27,7 @@ Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
 Plugin 'molok/vim-smartusline'
 Plugin 'whatyouhide/vim-gotham'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()
 "}
