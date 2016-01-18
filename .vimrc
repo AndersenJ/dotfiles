@@ -26,6 +26,7 @@ Plugin 'Raimondi/delimitMate.git'
 Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
 Plugin 'molok/vim-smartusline'
+Plugin 'whatyouhide/vim-gotham'
 
 call vundle#end()
 "}
