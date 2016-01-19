@@ -100,3 +100,6 @@ map <C-n> :NERDTreeToggle<CR>
 " sudo pip install pyclewn
 " python -c "import clewn; clewn.get_vimball()"
 " vim -S pyclewn-2.2.vmb
+
+" make vim remember longer registers for yy and p
+set viminfo='100,<500,s50
