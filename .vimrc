@@ -8,24 +8,29 @@ call vundle#begin()
 "list of plugins
 "to install/update/delete a plugin, add it here and run
 ":PluginInstall/:PluginUpdate/:PluginClean
+
+" Support for various languages
+Plugin 'groenewege/vim-less'
+Plugin 'adamclerk/vim-razor'
+Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'hail2u/vim-css3-syntax.git'
+
+" Other plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'isRuslan/vim-es6'
-Plugin 'pangloss/vim-javascript'
-Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'SirVer/ultisnips.git'
 Plugin 'Yggdroot/indentLine.git'
 Plugin 'Raimondi/delimitMate.git'
 Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
-Plugin 'molok/vim-smartusline'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
 
