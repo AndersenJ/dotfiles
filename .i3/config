@@ -211,7 +211,7 @@ hide_edge_borders none
 
 gaps inner 12
 
-gaps outer 3
+gaps outer -12
 
 # on startup
 
