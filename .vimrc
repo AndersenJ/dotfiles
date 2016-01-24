@@ -35,6 +35,7 @@ Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
+Plugin 'mbbill/undotree'
 
 call vundle#end()
 "}
@@ -112,3 +113,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " make vim remember longer registers for yy and p
 set viminfo='100,<500,s50
+
+"undotree start on F3
+map <F3> :UndotreeToggle<CR>
