@@ -22,6 +22,7 @@ Plugin 'hail2u/vim-css3-syntax.git'
 
 " Other plugins
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'MarcWeber/vim-addon-mw-utils'
