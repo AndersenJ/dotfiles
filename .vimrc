@@ -117,3 +117,6 @@ set viminfo='100,<500,s50
 
 "undotree start on F3
 map <F3> :UndotreeToggle<CR>
+
+" set folding to indent mode
+set foldmethod=indent
