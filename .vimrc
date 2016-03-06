@@ -64,12 +64,12 @@ set hls
 set lbr
 
 "change colorscheme
-set t_Co=256
-colo ansi_blows
+"colo ansi_blows
 "colo af
 "colo candy
 "colo basic
 "colo buttercream
+colo gotham
 "colo turbo
 
 "tab width of 4
@@ -89,6 +89,9 @@ set noerrorbells
 " something something regular expressions
 set magic
 
+" swap file rotation frequency (by keystroke)
+set updatecount=25
+
 " This is for syntastic to work properly for syntax checking
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
@@ -100,7 +103,7 @@ set magic
     let g:syntastic_check_on_wq = 0
 
 " Autocomplete for CSS
-"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " make NerdTree hotkey
 map <C-n> :NERDTreeToggle<CR>
@@ -118,5 +121,21 @@ set viminfo='100,<500,s50
 "undotree start on F3
 map <F3> :UndotreeToggle<CR>
 
-" set folding to indent mode
-set foldmethod=indent
+"Persistent Undo
+if has('persistent_undo')
+		set undolevels=5000
+		set undodir=$HOME/.VIM_UNDO_FILES
+		set undofile
+endif
+		
+" map <esc> and <C-[> to exit terminal mode on neovim
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-[]> <C-\><C-n>
+
+"testing stuff
+		" For jpegs
+		autocmd BufReadPre *.jpg,*.jpeg silent set ro
+		autocmd BufReadPost *.jpg,*.jpeg silent %!jp2a --width=78 "%"
+		" " For other image formats
+		autocmd BufReadPre *.png,*.gif,*.bmp silent set ro
+		autocmd BufReadPost *.png,*.gif,*.bmp silent %!convert "%" jpg:- | jp2a --width=78 -
