@@ -129,8 +129,10 @@ if has('persistent_undo')
 endif
 		
 " map <esc> and <C-[> to exit terminal mode on neovim
-tnoremap <Esc> <C-\><C-n>
-tnoremap <C-[]> <C-\><C-n>
+if has ('nvim')
+		tnoremap <Esc> <C-\><C-n>
+		tnoremap <C-[]> <C-\><C-n>
+endif
 
 "testing stuff
 		" For jpegs
