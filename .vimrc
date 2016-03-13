@@ -1,7 +1,5 @@
 " to install Vundle, run git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" needed to run vundle{
-set nocompatible
-filetype plugin indent off
+" needed to run vundle{ set nocompatible filetype plugin indent off
 syntax off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -134,7 +132,7 @@ if has ('nvim')
 		tnoremap <C-[]> <C-\><C-n>
 endif
 
-" set cool, useful relative numbers
+" show relative numbers
 set relativenumber
 
 "testing stuff
@@ -144,3 +142,70 @@ set relativenumber
 		" " For other image formats
 		autocmd BufReadPre *.png,*.gif,*.bmp silent set ro
 		autocmd BufReadPost *.png,*.gif,*.bmp silent %!convert "%" jpg:- | jp2a --width=78 -
+
+		"multiple column scrolling cool thingy
+		fun! s:scroll()
+				let l:save = &scrolloff
+				set scrolloff=0 noscrollbind nowrap nofoldenable
+				botright vsplit
+				normal L
+				normal j
+				normal zt
+				setlocal scrollbind
+				exe "normal \<c-w>p"
+				setlocal scrollbind
+
+				let &scrolloff = l:save
+		endfun
+		command! Scroll call s:scroll()
+
+		"weird rotate line screensaver
+		"Press \r to start rotating lines and <C-c> (Control+c) to stop.
+		function! s:RotateString(string)
+			let split_string = split(a:string, '\zs')
+			return join(split_string[-1:] + split_string[:-2], '')
+		endfunction
+
+		function! s:RotateLine(line, leading_whitespace, trailing_whitespace)
+			return substitute(
+				\ a:line,
+				\ '^\(' . a:leading_whitespace . '\)\(.\{-}\)\(' . a:trailing_whitespace . '\)$',
+				\ '\=submatch(1) . <SID>RotateString(submatch(2)) . submatch(3)',
+				\ ''
+			\ )
+		endfunction
+
+		function! s:RotateLines()
+			let saved_view = winsaveview()
+			let first_visible_line = line('w0')
+			let last_visible_line = line('w$')
+			let lines = getline(first_visible_line, last_visible_line)
+			let leading_whitespace = map(
+				\ range(len(lines)),
+				\ 'matchstr(lines[v:val], ''^\s*'')'
+			\ )
+			let trailing_whitespace = map(
+				\ range(len(lines)),
+				\ 'matchstr(lines[v:val], ''\s*$'')'
+			\ )
+			try
+				while 1 " <C-c> to exit
+					let lines = map(
+						\ range(len(lines)),
+						\ '<SID>RotateLine(lines[v:val], leading_whitespace[v:val], trailing_whitespace[v:val])'
+					\ )
+					call setline(first_visible_line, lines)
+					redraw
+					sleep 50m
+				endwhile
+			finally
+				if &modified
+					silent undo
+				endif
+				call winrestview(saved_view)
+			endtry
+		endfunction
+
+		nnoremap <silent> <Plug>(RotateLines) :<C-u>call <SID>RotateLines()<CR>
+
+		nmap \r <Plug>(RotateLines)
