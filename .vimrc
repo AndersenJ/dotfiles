@@ -134,6 +134,9 @@ if has ('nvim')
 		tnoremap <C-[]> <C-\><C-n>
 endif
 
+" set cool, useful relative numbers
+set relativenumber
+
 "testing stuff
 		" For jpegs
 		autocmd BufReadPre *.jpg,*.jpeg silent set ro
