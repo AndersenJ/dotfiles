@@ -18,6 +18,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'hail2u/vim-css3-syntax.git'
 
+" Indent Guides
+Plugin 'nathanaelkane/vim-indent-guides.git'
+
 " Other plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
