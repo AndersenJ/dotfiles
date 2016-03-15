@@ -21,11 +21,19 @@ Plugin 'hail2u/vim-css3-syntax.git'
 " Indent Guides
 Plugin 'nathanaelkane/vim-indent-guides.git'
 
+" Autocomplete; deoplete for nvim and youcompleteme for vim
+"Plugin 'Shougo/deoplete.nvim'
+"Plugin 'Valloric/YouCompleteMe'
+"Note that Valloric YouCompleteMe needs to be compiled. Use:
+"First, install cmake, python, nodejs, and npm
+"cd ~/.vim/bundle/YouCompleteMe
+"./install.py --clang-completer --omnisharp-completer --gocode-completer
+"--tern-completer
+
 " Other plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -41,11 +49,6 @@ Plugin 'mbbill/undotree'
 
 call vundle#end()
 "}
-"Note that Valloric YouCompleteMe needs to be compiled. Use:
-"First, install cmake, python, nodejs, and npm
-"cd ~/.vim/bundle/YouCompleteMe
-"./install.py --clang-completer --omnisharp-completer --gocode-completer
-"--tern-completer
 "There may also be other plugins that
 "require additional setup.
 
