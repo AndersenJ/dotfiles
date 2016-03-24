@@ -17,6 +17,7 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'hail2u/vim-css3-syntax.git'
+Plugin 'leafgarland/typescript-vim'
 
 " Indent Guides
 Plugin 'nathanaelkane/vim-indent-guides.git'
