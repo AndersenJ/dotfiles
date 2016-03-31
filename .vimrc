@@ -143,6 +143,10 @@ endif
 " show relative numbers
 set relativenumber
 
+" folding settings
+set foldmethod=syntax
+set fdn=6
+
 "testing stuff
 		" For jpegs
 		autocmd BufReadPre *.jpg,*.jpeg silent set ro
