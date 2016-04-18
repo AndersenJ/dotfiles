@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = AndersenJ
+	email = johnathan.andersen@byu.edu
+[core]
+	autocrlf = true
+	excludesfile = \\\\byu.local\\byub\\users\\jwander\\Documents\\gitignore_global.txt
+[alias]
+	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset)%C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+	visualise = !gitk
