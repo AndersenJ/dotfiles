@@ -9,3 +9,4 @@
 [alias]
 	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset)%C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
 	visualise = !gitk
+	visualize = !gitk
