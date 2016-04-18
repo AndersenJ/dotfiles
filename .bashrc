@@ -14,6 +14,8 @@ alias gcm='git commit -m'
 alias gca='git commit --amend'
 alias gd='git diff --color-words'
 alias gl='git log --oneline --decorate'
+alias gp='git push'
+alias gr='git pull'
 alias gsc='git rebase -i'
 alias gs='git stash'
 
