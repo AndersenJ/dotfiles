@@ -7,6 +7,7 @@
 
 alias ls='ls --color=auto'
 alias g='git status -sb'
+alias gb='git branch'
 alias gh='git hist'
 alias ga='git add'
 alias gc='git commit'
