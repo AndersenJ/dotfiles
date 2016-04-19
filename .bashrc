@@ -10,7 +10,7 @@ alias g='git status -sb'
 alias gb='git branch'
 alias gh='git hist'
 alias ga='git add'
-alias gc='git commit'
+alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
@@ -28,6 +28,7 @@ PS1="\[\e[32m\]\$(parse_git_branch)\[\e[33m\]\h:\W \$ \[\e[m\]"
 export PS1
 
 export VISUAL="vim"
+set -o vi
 
 ColorCursor=#ececefeff1f1
 ColorForeground=#ca52ca52ca52
