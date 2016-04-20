@@ -31,7 +31,7 @@ alias gvs2='git vs2'
 alias gvs3='git vs3'
 
 function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)) /'
+	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 PS1="\[\e[32m\]\$(parse_git_branch)\[\e[33m\]\h:\W \$ \[\e[m\]"
 export PS1
