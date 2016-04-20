@@ -1,5 +1,5 @@
 mkdir ~/.i3
-sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop
+sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch
 cp .vimrc ~/.vimrc
 cp .xinitrc ~/.xinitrc
 cp .vimperatorrc ~/.vimperatorrc
