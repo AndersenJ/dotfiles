@@ -8,5 +8,5 @@
 	excludesfile = \\\\byu.local\\byub\\users\\jwander\\Documents\\gitignore_global.txt
 [alias]
 	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset)%C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
-	visualise = !gitk
-	visualize = !gitk
+	visualise = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[32m%d%x1b[0m%x20%s"
+	visualize = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[32m%d%x1b[0m%x20%s"
