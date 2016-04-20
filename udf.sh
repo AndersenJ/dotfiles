@@ -10,3 +10,4 @@ cp ~/dotfiles/.vimperatorrc ~/
 cp ~/dotfiles/.gitconfig ~/
 cp ~/dotfiles/.xinitrc ~/
 cp ~/dotfiles/.Xresources ~/
+source ~/.bashrc
