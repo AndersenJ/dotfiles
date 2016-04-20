@@ -22,6 +22,7 @@ alias gr='git pull'
 alias gsc='git rebase -i'
 alias gs='git stash'
 alias gsp='git stash pop'
+alias gv='git visualize'
 
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)) /'
