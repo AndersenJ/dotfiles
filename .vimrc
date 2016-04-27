@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Support for various languages
 Plugin 'groenewege/vim-less'
 Plugin 'adamclerk/vim-razor'
+Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
