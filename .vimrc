@@ -148,6 +148,9 @@ set relativenumber
 set foldmethod=syntax
 set fdn=6
 
+" jj to exit insert mode
+map! jj <Esc>
+
 "testing stuff
 		" For jpegs
 		autocmd BufReadPre *.jpg,*.jpeg silent set ro
