@@ -262,9 +262,9 @@ client.unfocused            $bgcolor $bgcolor $fgcolor $bgcolor
 
 # After loggin in
 
-exec termite
-exec xfce4-terminal
-exec compton --config ~/.config/compton.conf -b -c
+#exec termite
+#exec xfce4-terminal
+#exec compton --config ~/.config/compton.conf -b -c
 exec feh --bg-scale /home/johnathan/Downloads/A1.jpg
 
 
