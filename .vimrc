@@ -48,7 +48,10 @@ Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
+
+" undotree stuff
 Plugin 'mbbill/undotree'
+Plugin 'sjl/gundo.vim/git'
 
 call vundle#end()
 "}
@@ -85,6 +88,12 @@ set shiftwidth=4
 
 "set paste to f2
 set pastetoggle=<F2>
+
+"undotree start on F3
+map <F3> :UndotreeToggle<CR>
+
+"gundotree start on F4
+nnoremap <F4> :GundoToggle<CR>
 
 set background=dark
 
@@ -125,9 +134,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " make vim remember longer registers for yy and p
 set viminfo='100,<500,s50
-
-"undotree start on F3
-map <F3> :UndotreeToggle<CR>
 
 "Persistent Undo
 if has('persistent_undo')
