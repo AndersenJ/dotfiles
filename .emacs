@@ -30,10 +30,11 @@ Return a list of installed packages or nil for every skipped package."
 ;; List of packages to install
 (ensure-package-installed 'auto-complete
 			  'color-theme
-                          'evil
+              'evil
 			  'helm
 			  'neotree
 			  'paredit
+              'rainbow-delimiters'
 			  'relative-line-numbers
 			  'slime
 			  'undo-tree)
@@ -46,7 +47,7 @@ Return a list of installed packages or nil for every skipped package."
 (require 'color-theme)
 ;;(color-theme-bharadwaj-slate)
 ;;(color-theme-kingsajz)
-(color-theme-subtle-hacker)
+;;(color-theme-subtle-hacker)
 
 ;; Setup evil mode
 (require 'evil)
@@ -65,6 +66,10 @@ Return a list of installed packages or nil for every skipped package."
   (define-key slime-repl-mode-map
     (read-kbd-macro-paredit-backward-delete-key) nil))
 (add-hook 'slime-repl-mode-hook 'override-slime-repl-bindings-with-paredit)
+
+;; Enable rainbow delimiters
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; Enable relative line numbering
 (require 'relative-line-numbers)
