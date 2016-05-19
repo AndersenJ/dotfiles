@@ -34,7 +34,7 @@ Return a list of installed packages or nil for every skipped package."
 			  'helm
 			  'neotree
 			  'paredit
-              'rainbow-delimiters'
+              'rainbow-delimiters
 			  'relative-line-numbers
 			  'slime
 			  'undo-tree)
