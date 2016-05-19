@@ -20,6 +20,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'kovisoft/slimv'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
@@ -53,7 +54,6 @@ Plugin 'vim-airline/vim-airline'
 
 " undotree stuff
 Plugin 'mbbill/undotree'
-Plugin 'sjl/gundo.vim/git'
 
 call vundle#end()
 "}
@@ -96,9 +96,6 @@ set pastetoggle=<F2>
 
 "undotree start on F3
 map <F3> :UndotreeToggle<CR>
-
-"gundotree start on F4
-nnoremap <F4> :GundoToggle<CR>
 
 "rainbow parentheses settings
 let g:rainbow_active = 1

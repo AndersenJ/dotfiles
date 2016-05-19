@@ -12,4 +12,5 @@ cp ~/dotfiles/.vimperatorrc ~/
 cp ~/dotfiles/.gitconfig ~/
 cp ~/dotfiles/.xinitrc ~/
 cp ~/dotfiles/.Xresources ~/
+vim +PluginClean +PluginUpdate +qall
 source ~/.bashrc
