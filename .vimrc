@@ -69,6 +69,9 @@ set number
 " set syntax on
 syntax on
 
+" set backspace to work more normally and consistently
+set backspace=indent,eol,start
+
 "highlight search
 set hls
 
@@ -174,6 +177,7 @@ endif
 if has ('nvim')
 		tnoremap <Esc> <C-\><C-n>
 		tnoremap <C-[]> <C-\><C-n>
+		mouse=
 endif
 
 " show relative numbers

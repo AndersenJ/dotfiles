@@ -169,18 +169,11 @@ bar {
          #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
          font pango: Input Mono Medium 8
 
-colors {
-    
-    background #263238
-    statusline #2fccbc
-    separator #FFFFFF
-
-
-    
-
-
-}
-
+		 colors {
+			 background #263238
+			 statusline #2fccbc
+			 separator #FFFFFF
+		 }
 }
 
 # keybindings for executing important applications
@@ -231,8 +224,8 @@ bindsym XF86AudioNext           exec "cmus-remote -n"
 
 # No border for some apps
 
-for_window [class="^Firefox$"] border none
-for_window [class="^Thunderbird$"] border none
+#for_window [class="^Firefox$"] border none
+#for_window [class="^Thunderbird$"] border none
 
 
 # colors
