@@ -3,6 +3,8 @@ sudo dnf -y install dnf-plugins-core
 sudo dnf -y copr enable dperson/neovim
 sudo dnf -y install neovim
 sudo dnf install vim i3 firefox git htop python2-greenlet-devel xclip emacs xfce4-terminal
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install vim i3-wm i3status i3lock i3 suckless-tools network-manager htop git xclip emacs xfce4-terminal
 chmod +x udf.sh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ./udf.sh
