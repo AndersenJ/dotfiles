@@ -6,6 +6,9 @@ rm ~/.vimperatorrc
 rm ~/.gitconfig
 rm ~/.xinitrc
 rm ~/.Xresources
+rm ~/.i3/config
+mkdir ~/.i3
+cp .i3/config ~/.i3
 cp ~/dotfiles/.vimrc ~/
 cp ~/dotfiles/.bashrc ~/
 cp ~/dotfiles/.emacs ~/
