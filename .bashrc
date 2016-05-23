@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto -sh'
+alias ls='ls --color=auto'
 alias g='git status -sb'
 alias gb='git branch'
 alias gh='git hist'
