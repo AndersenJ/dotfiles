@@ -8,6 +8,7 @@ rm ~/.xinitrc
 rm ~/.Xresources
 rm ~/.i3/config
 rm ~/.config/xfce4/terminal/terminalrc
+rm ~/.muttrc
 mkdir ~/.i3
 mkdir ~/.config
 mkdir ~/.config/xfce4
@@ -22,5 +23,6 @@ cp ~/dotfiles/.gitconfig ~/
 cp ~/dotfiles/.xinitrc ~/
 cp ~/dotfiles/.Xresources ~/
 cp ~/dotfiles/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
+cp ~/dotfiles/.muttrc ~/
 vim +PluginClean +PluginUpdate +qall
 source ~/.bashrc

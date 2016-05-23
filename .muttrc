@@ -1,0 +1,8 @@
+set imap_user=Andernerd@gmail.com
+set folder=imaps://imap.gmail.com/
+set spoolfile=+INBOX
+mailboxes imaps://imap.gmail.com/INBOX imaps://imap.gmail.com/family
+set postponed = +[Gmail]/Drafts
+unset imap_passive
+set imap_keepalive = 300
+set mail_check = 120
