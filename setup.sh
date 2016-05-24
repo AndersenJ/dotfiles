@@ -1,4 +1,4 @@
-sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt
+sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt ttf-hack
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y copr enable dperson/neovim
 sudo dnf -y copr enable heliocastro/hack-fonts
