@@ -1,18 +1,18 @@
-rm ~/.vimrc
-rm ~/.bashrc
-rm ~/.emacs
-rm ~/.profile
-rm ~/.vimperatorrc
-rm ~/.gitconfig
-rm ~/.xinitrc
-rm ~/.Xresources
-rm ~/.i3/config
-rm ~/.config/xfce4/terminal/terminalrc
-rm ~/.muttrc
-mkdir ~/.i3
-mkdir ~/.config
-mkdir ~/.config/xfce4
-mkdir ~/.config/xfce4/terminal
+rm ~/.vimrc 2> /dev/null
+rm ~/.bashrc 2> /dev/null
+rm ~/.emacs 2> /dev/null
+rm ~/.profile 2> /dev/null
+rm ~/.vimperatorrc 2> /dev/null
+rm ~/.gitconfig 2> /dev/null
+rm ~/.xinitrc 2> /dev/null
+rm ~/.Xresources 2> /dev/null
+rm ~/.i3/config 2> /dev/null
+rm ~/.config/xfce4/terminal/terminalrc 2> /dev/null
+rm ~/.muttrc 2> /dev/null
+mkdir ~/.i3 2> /dev/null
+mkdir ~/.config 2> /dev/null
+mkdir ~/.config/xfce4 2> /dev/null
+mkdir ~/.config/xfce4/terminal 2> /dev/null
 cp ~/dotfiles/.i3/config ~/.i3/config
 cp ~/dotfiles/.vimrc ~/
 cp ~/dotfiles/.bashrc ~/
