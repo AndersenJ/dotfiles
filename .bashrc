@@ -8,7 +8,9 @@
 # Automatically prepend cd when entering a path into shell
 shopt -s autocd
 
-alias ls='ls --color=auto'
+alias ls='ls -hF --color=auto'
+alias ll='ls -l'
+alias lz='ll -rS'					#sort by size
 alias g='git status -sb'
 alias gb='git branch'
 alias gh='git hist'
@@ -36,6 +38,8 @@ alias gv3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 alias gvs1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias gvs2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gvs3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)"
+alias :q=' exit'
+alias cd..='cd ..'
 
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
