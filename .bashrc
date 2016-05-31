@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Automatically prepend cd when entering a path into shell
+shopt -s autocd
+
 alias ls='ls --color=auto'
 alias g='git status -sb'
 alias gb='git branch'
