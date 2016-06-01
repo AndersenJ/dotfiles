@@ -172,7 +172,7 @@ endif
 if has ('nvim')
 		tnoremap <Esc> <C-\><C-n>
 		tnoremap <C-[]> <C-\><C-n>
-		mouse=
+		set mouse=
 endif
 
 " show relative numbers
