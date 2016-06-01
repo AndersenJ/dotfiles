@@ -16,7 +16,6 @@ Plugin 'adamclerk/vim-razor'
 Plugin 'elzr/vim-json'
 Plugin 'isRuslan/vim-es6'
 Plugin 'pangloss/vim-javascript'
-Plugin 'ternjs/tern_for_vim'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'digitaltoad/vim-pug'
@@ -35,7 +34,6 @@ Plugin 'nathanaelkane/vim-indent-guides.git'
 "First, install cmake, python, nodejs, and npm
 "cd ~/.vim/bundle/YouCompleteMe
 "./install.py --clang-completer --omnisharp-completer --gocode-completer
-"--tern-completer
 
 " Other plugins
 Plugin 'scrooloose/nerdtree'
