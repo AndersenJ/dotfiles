@@ -1,5 +1,5 @@
 #Arch Linux
-sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt ttf-hack 2> /dev/null
+sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt ttf-hack pcmanfm rofi lolcat pv 2> /dev/null
 
 #Fedora Linux
 sudo dnf -y install dnf-plugins-core 2> /dev/null

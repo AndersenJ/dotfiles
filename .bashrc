@@ -5,26 +5,35 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# Automatically prepend cd when entering a path into shell
+shopt -s autocd
+
+alias :q=' exit'
+alias ..='cd ..'
+alias cat='lolcat'
+alias cd..='cd ..'
+alias clear='clear && screenfetch'
+alias ls='ls -hF --color=auto'
+alias ll='ls -l'
+alias lz='ll -rS'					#sort by size
 alias g='git status -sb'
-alias gb='git branch'
-alias gh='git hist'
 alias ga='git add'
+alias gb='git branch'
 alias gc='git checkout'
+alias gca='git commit --amend'
 alias gcb='git checkout -b'
+alias gcf='git commit -m "reformatted some stuff"'
 alias gcm='git commit -m'
 alias gcs='git commit -m "did some stuff"'
-alias gcf='git commit -m "reformatted some stuff"'
-alias gca='git commit --amend'
 alias gd='git diff --color-words'
+alias gh='git hist'
 alias gl='git log --oneline --decorate'
 alias gm='git merge'
 alias gp='git push'
 alias gr='git pull'
-alias gsc='git rebase -i'
 alias gs='git stash'
+alias gsc='git rebase -i'
 alias gsp='git stash pop'
-alias untar='tar xvfz'
 alias ghist='git log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset)%C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate'
 alias gv="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gv1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
@@ -33,6 +42,12 @@ alias gv3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold b
 alias gvs1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias gvs2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gvs3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)"
+alias hist='history | grep'
+alias justdoit='sudo "$BASH" -c "$(history -p !!)"'
+alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias untar='tar xvfz'
+alias update='sudo pacman -Syu'
+alias upgrade='sudo pacman -Syu'
 
 function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
