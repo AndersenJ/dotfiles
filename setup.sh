@@ -9,7 +9,7 @@ sudo dnf -y install vim i3 firefox git htop python2-greenlet-devel xclip emacs x
 
 #Linux Mint
 sudo apt-get update && sudo apt-get upgrade 2> /dev/null
-sudo apt-get install vim i3-wm i3status i3lock i3 suckless-tools network-manager htop git xclip emacs xfce4-terminal mutt 2> /dev/null
+sudo apt-get install vim i3-wm i3status i3lock i3 suckless-tools network-manager htop git xclip emacs xfce4-terminal mutt scrot lsb-release 2> /dev/null
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 chmod +x udf.sh
