@@ -31,7 +31,7 @@ set $mod Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec xfce4-terminal -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -74,7 +74,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -180,6 +180,7 @@ bar {
 
 bindsym $mod+z exec pcmanfm
 bindsym $mod+t exec xfce4-terminal
+bindsym $mod+f exec xfce4-terminal -e fish
 bindsym $mod+y exec thunar
 bindsym $mod+Shift+y exec pcmanfm
 bindsym $mod+o exec firefox

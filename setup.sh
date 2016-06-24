@@ -1,5 +1,5 @@
 #Arch Linux
-sudo pacman -Syu vim neovim i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt ttf-hack pcmanfm rofi lolcat pv 2> /dev/null
+sudo pacman -Syu vim neovim python2-neovim python-neovim sway i3-wm i3status i3lock dmenu xorg-server xorg-utils xorg-xclipboard xorg-apps xterm xorg-xinit firefox networkmanager htop screenfetch git xclip emacs xfce4-terminal mutt ttf-hack pcmanfm rofi lolcat pv powertop fish 2> /dev/null
 
 #Fedora Linux
 sudo dnf -y install dnf-plugins-core 2> /dev/null
@@ -9,7 +9,7 @@ sudo dnf -y install vim i3 firefox git htop python2-greenlet-devel xclip emacs x
 
 #Linux Mint
 sudo apt-get update && sudo apt-get upgrade 2> /dev/null
-sudo apt-get install vim i3-wm i3status i3lock i3 suckless-tools network-manager htop git xclip emacs xfce4-terminal mutt 2> /dev/null
+sudo apt-get install vim i3-wm i3status i3lock i3 suckless-tools network-manager htop git xclip emacs xfce4-terminal mutt scrot lsb-release 2> /dev/null
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 chmod +x udf.sh

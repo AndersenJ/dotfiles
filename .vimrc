@@ -64,6 +64,9 @@ set autoindent
 " turn on line numbering
 set number
 
+" tell delimitmate to not screw up my LISP
+au FileType lisp let b:delimitMate_quotes = "\""
+
 " set syntax on
 syntax on
 
