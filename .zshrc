@@ -61,15 +61,18 @@ alias untar='tar xvfz'
 alias update='sudo pacman -Syu'
 alias upgrade='sudo pacman -Syu'
 
-function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
-}
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
 autoload -Uz promptinit
 promptinit
 autoload -Uz colors
 colors
-PROMPT=%{$fg[green]%}$(parse_git_branch)%{$fg[yellow]%}%2~%{$reset_color%}\ $\ 
+PROMPT=%{$fg[green]%}\$vcs_info_msg_0_\ %{$fg[yellow]%}%2~%{$reset_color%}\ $\ 
 RPROMPT="[%{$fg[green]%}%?%{$reset_color%}]"
+zstyle ':vcs_info:git:*' formats '%b'
+
 ColorCursor=#ececefeff1f1
 ColorForeground=#ca52ca52ca52
 ColorBackground=#262632323838
