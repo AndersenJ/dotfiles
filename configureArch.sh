@@ -8,7 +8,6 @@ rm /etc/locale.gen
 cp ./locale.gen /etc/locale.gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 export LANG=en_US.UTF-8
-systemctl enable dhcpcd@eth0.service
 echo "[multilib]" >> /etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 useradd -m -g users -G wheel,storage,power -s /bin/bash johnathan
