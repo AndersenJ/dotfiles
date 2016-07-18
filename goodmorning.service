@@ -1,0 +1,8 @@
+[Unit]
+Description=good morning
+RefuseManualStart=true
+RefuseManualStop=true
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemd-inhibit --what=handle-lid-switch --why=goodmorning /bin/bash /home/johnathan/goodmorning.sh"

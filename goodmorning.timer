@@ -1,0 +1,11 @@
+[Unit]
+Description=good morning
+
+[Timer]
+Unit=goodmorning.service
+OnCalendar=*-*-* 7:30
+WakeSystem=true
+Persistent=false
+
+[Install]
+WantedBy=multi-user.target
