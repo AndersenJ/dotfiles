@@ -88,9 +88,10 @@ set lbr
 colo gotham
 "colo turbo
 
-"tab width of 4
-set tabstop=4
-set shiftwidth=4
+"tab width
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 "set paste to f2
 set pastetoggle=<F2>
