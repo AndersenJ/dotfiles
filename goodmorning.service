@@ -4,4 +4,4 @@ Description=good morning
 [Service]
 Type=oneshot
 User=johnathan
-ExecStart=/bin/systemd-inhibit --what=handle-lid-switch --why=goodmorning /bin/bash /home/johnathan/goodmorning.sh"
+ExecStart=/bin/systemd-inhibit --what=handle-lid-switch --why=goodmorning /bin/bash /home/johnathan/goodmorning.sh
