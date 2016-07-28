@@ -96,6 +96,11 @@ set expandtab
 "set paste to f2
 set pastetoggle=<F2>
 
+"j and k will now go down only part of the line if the line is wrapping, as
+"with other editors
+noremap j gj
+noremap k gk
+
 "undotree start on F3
 map <F3> :UndotreeToggle<CR>
 
