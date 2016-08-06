@@ -56,9 +56,9 @@ alias gvs1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias gvs2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias gvs3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)"
 alias hist='history | grep'
-alias justdoit='sudo "$BASH" -c "$(history -p !!)"'
-alias override='sudo "$BASH" -c "$(history -p !!)"'
-alias please='sudo "$BASH" -c "$(history -p !!)"'
+alias justdoit='sudo $(fc -ln -1)'
+alias override='sudo $(fc -ln -1)'
+alias please='sudo $(fc -ln -1)'
 alias untar='tar xvfz'
 alias update='sudo pacman -Syu'
 alias upgrade='sudo pacman -Syu'
