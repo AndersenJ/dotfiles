@@ -41,7 +41,7 @@ bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -89,9 +89,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Name the workspaces
 set $tag1 "I"
@@ -184,10 +181,7 @@ bindsym $mod+f exec xfce4-terminal -e fish
 bindsym $mod+y exec thunar
 bindsym $mod+Shift+y exec pcmanfm
 bindsym $mod+o exec firefox
-bindsym $mod+Shift+o exec qutebrowser
 bindsym Print exec scrot
-bindsym $mod+Shift+t exec termite
-bindsym $mod+ctrl+t exec konsole
 
 
 bindsym $mod+p          exec rofi -show run -font "Input Mono Bold 9" -fg "#ECEFF1" -bg "#263238" -hlfg "#009688" -hlbg "#202A2F" -o 90
@@ -254,12 +248,8 @@ client.focused              $fgcolor $fgcolor $bgcolor $fgcolor
 client.focused_inactive     $bgcolor $bgcolor $fgcolor $bgcolor
 client.unfocused            $bgcolor $bgcolor $fgcolor $bgcolor
 
-# After loggin in
-
-#exec termite
-#exec xfce4-terminal
-#exec compton --config ~/.config/compton.conf -b -c
-exec feh --bg-scale /home/johnathan/Downloads/A1.jpg
+# After loggin in, set desktop background
+exec feh --bg-scale /home/johnathan/A1.jpg
 
 
 # Specific workspace config
