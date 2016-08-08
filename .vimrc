@@ -85,7 +85,8 @@ set lbr
 "colo candy
 "colo basic
 "colo buttercream
-colo gotham
+colo desert
+"colo gotham
 "colo turbo
 
 "tab width
