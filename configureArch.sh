@@ -3,9 +3,9 @@ read newHostname
 echo "$newHostname" > /etc/hostname
 ln -s /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc --utc
-locale-gen
 rm /etc/locale.gen
 cp ./locale.gen /etc/locale.gen
+locale-gen
 rm /etc/locale.conf
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 export LANG=en_US.UTF-8
