@@ -21,6 +21,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'kovisoft/slimv'
 Plugin 'lervag/vimtex'
+Plugin 'WolfgangMehner/vim-plugins'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
@@ -29,7 +30,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 
 " Autocomplete; deoplete for nvim and youcompleteme for vim
-"Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete.nvim'
 "Plugin 'Valloric/YouCompleteMe'
 "Note that Valloric YouCompleteMe needs to be compiled. Use:
 "First, install cmake, python, nodejs, and npm
@@ -184,6 +185,7 @@ if has ('nvim')
 		tnoremap <Esc> <C-\><C-n>
 		tnoremap <C-[]> <C-\><C-n>
 		set mouse=
+    let g:deoplete#enable_at_startup = 1
 endif
 
 " show relative numbers
