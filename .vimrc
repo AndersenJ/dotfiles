@@ -20,6 +20,7 @@ Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'kovisoft/slimv'
+Plugin 'lervag/vimtex'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
