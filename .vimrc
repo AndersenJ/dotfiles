@@ -21,7 +21,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'kovisoft/slimv'
 Plugin 'lervag/vimtex'
-Plugin 'WolfgangMehner/vim-plugins'
+Plugin 'WolfgangMehner/bash-support'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
