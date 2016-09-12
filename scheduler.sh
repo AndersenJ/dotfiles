@@ -1,3 +1,5 @@
+#!/bin/sh
+
 for bd in sda sdb sdc sdd ; do
 	if [ -e /sys/block/$bd/queue/scheduler ] ; then
 		echo deadline > /sys/block/$bd/queue/scheduler

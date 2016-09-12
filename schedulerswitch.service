@@ -1,0 +1,9 @@
+[Unit]
+Description=Switch IO scheduler to deadline
+
+[Service]
+Type=oneshot
+ExecStart=/home/johnathan/dotfiles/scheduler.sh
+
+[Install]
+WantedBy=multi-user.target
