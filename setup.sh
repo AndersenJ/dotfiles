@@ -1,5 +1,5 @@
 #Arch Linux
-sudo pacman -Syu dmenu emacs firefox fish git gvim htop i3-wm i3lock i3status lolcat mutt networkmanager neovim pcmanfm powertop pv python2-neovim python-neovim rofi sbcl screenfetch scrot sway transmission-qt ttf-hack wget xfce4-terminal xorg-apps xorg-server xorg-utils xorg-xclipboard xorg-xinit xclip xterm zsh zsh-syntax-highlighting 2> /dev/null
+sudo pacman -Syu cups dmenu emacs feh firefox fish git gvim htop i3-wm i3lock i3status lolcat lsof mutt networkmanager neovim pcmanfm powertop pv python2-neovim python-neovim rofi sbcl screenfetch scrot sway transmission-qt ttf-hack unzip wget xfce4-terminal xorg-apps xorg-server xorg-utils xorg-xclipboard xorg-xinit xclip xterm zsh zsh-syntax-highlighting 2> /dev/null
 
 #Fedora Linux
 sudo dnf -y install dnf-plugins-core 2> /dev/null
@@ -17,4 +17,4 @@ chmod +x udf.sh
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
-tar xvfz clewn.tar.gz
+#tar xvfz clewn.tar.gz
