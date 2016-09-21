@@ -56,11 +56,14 @@ alias gvs1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias gvs2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 alias hist='history | grep'
 alias justdoit='sudo $(fc -ln -1)'
+alias mkdir='mkdir -pv'
 alias override='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
+alias ports='netstat -tulanp'
 alias untar='tar xvfz'
 alias update='sudo pacman -Syu'
 alias upgrade='sudo pacman -Syu'
+alias wget='wget -c'
 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
