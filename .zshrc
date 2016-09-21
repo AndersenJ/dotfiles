@@ -22,6 +22,8 @@ bindkey -v
 
 alias :q=' exit'
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias cat='lolcat'
 alias cd..='cd ..'
 alias clear='clear && screenfetch'
