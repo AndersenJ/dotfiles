@@ -92,7 +92,7 @@ Return a list of installed packages or nil for every skipped package."
 (menu-bar-mode -1)
 
 ;; Enable system clipboard
-(setq x-select-enable-clipboard)
+(setq x-select-enable-clipboard t)
 
 ;; Indicate empty lines
 (setq-default indicate-empty-lines t)
