@@ -10,7 +10,7 @@ shopt -s autocd
 
 alias :q=' exit'
 alias ..='cd ..'
-alias cat='lolcat'
+#alias cat='lolcat'
 alias cd..='cd ..'
 alias clear='clear && screenfetch'
 alias ls='ls -hF --color=auto'
