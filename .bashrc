@@ -8,6 +8,7 @@
 # Automatically prepend cd when entering a path into shell
 shopt -s autocd
 
+cs() { cd "$1" && ls; }
 alias :q=' exit'
 alias ..='cd ..'
 #alias cat='lolcat'

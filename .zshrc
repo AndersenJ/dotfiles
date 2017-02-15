@@ -20,6 +20,7 @@ bindkey -v
 #
 # Automatically prepend cd when entering a path into shell
 
+cs() { cd "$1" && ls; }
 alias :q=' exit'
 alias ..='cd ..'
 alias ...='cd ../..'
