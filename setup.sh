@@ -1,5 +1,6 @@
 #Arch Linux
 sudo pacman -Syu cups dmenu emacs feh firefox fish git gvim htop i3-wm i3lock i3status lolcat lsof mutt networkmanager neovim net-tools pcmanfm powertop pv python2-neovim python-neovim rofi sbcl screenfetch scrot sl transmission-qt ttf-hack unzip wget xfce4-terminal xorg-apps xorg-server xorg-utils xorg-xclipboard xorg-xinit xclip xterm zsh zsh-syntax-highlighting
+sudo systemctl enable ntpdate.service -q
 
 #Fedora Linux
 sudo dnf -y install dnf-plugins-core 2> /dev/null
