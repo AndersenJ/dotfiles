@@ -66,6 +66,8 @@ alias update='sudo pacman -Syu'
 alias upgrade='sudo pacman -Syu'
 alias wget='wget -c'
 
+export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
+
 extract () {
     if [ -f $1 ] ; then
         case $1 in

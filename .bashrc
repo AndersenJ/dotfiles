@@ -80,6 +80,8 @@ export PS1
 export VISUAL="vim"
 set -o vi
 
+export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
+
 ColorCursor=#ececefeff1f1
 ColorForeground=#ca52ca52ca52
 ColorBackground=#262632323838
