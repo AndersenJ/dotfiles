@@ -27,4 +27,5 @@ cp ~/dotfiles/.config/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/termina
 cp ~/dotfiles/.muttrc ~/
 cp ~/dotfiles/.aliases.sh ~/
 #cp ~/dotfiles/.zshrc ~/
+#cp ~/dotfiles/.omzshrc ~/.zshrc
 vim +PluginClean +PluginUpdate +qall
