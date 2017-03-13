@@ -72,6 +72,9 @@ au FileType lisp let b:delimitMate_quotes = "\""
 " set syntax on
 syntax on
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " set backspace to work more normally and consistently
 set backspace=indent,eol,start
 
