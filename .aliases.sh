@@ -41,6 +41,7 @@ alias ports='netstat -tulanp'
 alias untar='tar xvfz'
 alias update='sudo pacman -Syu'
 alias upgrade='sudo pacman -Syu'
+alias vdi='lspci -k | grep -A 2 -E "(VGA|3D)"'
 alias wget='wget -c'
 extract () {
     if [ -f $1 ] ; then
