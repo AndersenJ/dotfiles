@@ -22,6 +22,7 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'kovisoft/slimv'
 Plugin 'lervag/vimtex'
 Plugin 'JuliaLang/julia-vim'
+Plugin 'sirtaj/vim-openscad'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
