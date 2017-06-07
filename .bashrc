@@ -15,7 +15,7 @@ PS1="\[\e[32m\]\$(parse_git_branch)\[\e[33m\]\h:\W \$ \[\e[m\]"
 export PS1
 
 export VISUAL="vim"
-set -o vi
+#set -o vi
 
 export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
 
