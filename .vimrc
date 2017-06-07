@@ -31,12 +31,12 @@ Plugin 'luochen1990/rainbow'
 Plugin 'nathanaelkane/vim-indent-guides.git'
 
 " Autocomplete; deoplete for nvim and youcompleteme for vim
-Plugin 'Shougo/deoplete.nvim'
-"Plugin 'Valloric/YouCompleteMe'
-"Note that Valloric YouCompleteMe needs to be compiled. Use:
-"First, install cmake, python, nodejs, and npm
-"cd ~/.vim/bundle/YouCompleteMe
-"./install.py --clang-completer --omnisharp-completer --gocode-completer
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'Valloric/YouCompleteMe'
+" Note that Valloric YouCompleteMe needs to be compiled. Use:
+" First, install cmake, python, nodejs, and npm
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --clang-completer --omnisharp-completer --gocode-completer
 
 " Other plugins
 Plugin 'scrooloose/nerdtree'
@@ -96,8 +96,8 @@ colo desert
 "colo turbo
 
 "tab width
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 "set paste to f2
