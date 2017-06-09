@@ -52,6 +52,7 @@ Plugin 'airblade/vim-rooter.git'
 Plugin 'adragomir/javacomplete'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
+Plugin 'severin-lemaignan/vim-minimap'
 
 " undotree stuff
 Plugin 'mbbill/undotree'
@@ -103,11 +104,14 @@ set expandtab
 "set paste to f2
 set pastetoggle=<F2>
 
-"undotree start on F3
+"undotree start on f3
 map <F3> :UndotreeToggle<CR>
 
 "format json on f4
 map <F4> :%!python -m json.tool<CR>
+
+"show minimap on f5
+map <F5> :Minimap
 
 "j and k will now go down only part of the line if the line is wrapping, as
 "with other editors
