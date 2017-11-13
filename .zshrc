@@ -15,7 +15,9 @@ HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
 setopt extendedglob
-bindkey -v
+#vim hotkeys
+#bindkey -v
+
 # End of lines configured by zsh-newuser-install
 #
 # Automatically prepend cd when entering a path into shell
