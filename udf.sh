@@ -10,6 +10,7 @@ rm ~/.i3/config 2> /dev/null
 rm ~/.muttrc 2> /dev/null
 rm ~/.aliases.sh 2> /dev/null
 #rm ~/.zshrc 2> /dev/null
+mkdir ~/.VIM_UNDO_FILES
 mkdir ~/.i3 2> /dev/null
 mkdir ~/.config 2> /dev/null
 mkdir ~/.config/xfce4 2> /dev/null
