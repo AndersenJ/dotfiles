@@ -23,6 +23,7 @@ setopt extendedglob
 # Automatically prepend cd when entering a path into shell
 
 export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
+export EDITOR=vim
 
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
