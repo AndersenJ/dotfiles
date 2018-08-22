@@ -1,5 +1,6 @@
 #Arch Linux
 sudo pacman -Syu \
+    anthy \
     cups \
     dmenu \
     emacs \
@@ -19,6 +20,7 @@ sudo pacman -Syu \
     neovim \
     net-tools \
     ntp \
+    otf-ipafont \
     pcmanfm \
     powertop \
     pv \
@@ -31,6 +33,7 @@ sudo pacman -Syu \
     sl \
     transmission-qt \
     ttf-hack \
+    uim \
     unzip \
     wine \
     wine_gecko \
