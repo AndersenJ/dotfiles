@@ -209,6 +209,23 @@ set fdn=6
 " jj to exit insert mode
 map! jj <Esc>
 
+" tab for autocomplete
+" Use TAB to complete when typing words, else inserts TABs as usual.
+" Uses source files to find matching words to complete.
+
+" See help completion for source,
+" Note: usual completion is on <C-n> but more trouble to press all the time.
+" Never type the same word twice and maybe learn a new spellings!
+" Window users can copy the file to their machine.
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
 "testing stuff
 		" For jpegs
 		autocmd BufReadPre *.jpg,*.jpeg silent set ro
