@@ -23,6 +23,7 @@ Plugin 'kovisoft/slimv'
 Plugin 'lervag/vimtex'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'sirtaj/vim-openscad'
+Plugin 'vim-python/python-syntax'
 
 " Rainbow Parentheses
 Plugin 'luochen1990/rainbow'
@@ -208,6 +209,16 @@ set fdn=6
 
 " jj to exit insert mode
 map! jj <Esc>
+
+" python indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 " tab for autocomplete
 " Use TAB to complete when typing words, else inserts TABs as usual.
