@@ -211,14 +211,18 @@ set fdn=6
 map! jj <Esc>
 
 " python indentation
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+"au BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
+
+" Python settings
+let g:python_highlight_all = 1
+let g:python_version_2 = 0
 
 " tab for autocomplete
 " Use TAB to complete when typing words, else inserts TABs as usual.
