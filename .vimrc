@@ -23,6 +23,8 @@ Plugin 'kovisoft/slimv'
 Plugin 'lervag/vimtex'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'sirtaj/vim-openscad'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'nvie/vim-flake8'
 Plugin 'vim-python/python-syntax'
 
 " Rainbow Parentheses
@@ -39,9 +41,20 @@ Plugin 'nathanaelkane/vim-indent-guides.git'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --clang-completer --omnisharp-completer --gocode-completer
 
+" Syntax highlighting
+" Plugin 'scrooloose/syntastic'
+Plugin 'dense-analysis/ale'
+
+if has('nvim')
+    Plugin 'Shougo/deoplete.nvim'
+else
+    Plugin 'Shougo/deoplete.nvim'
+    Plugin 'roxma/nvim-yarp'
+    Plugin 'roxma/vim-hug-neovim-rpc'
+endif
+
 " Other plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -54,6 +67,10 @@ Plugin 'adragomir/javacomplete'
 Plugin 'whatyouhide/vim-gotham'
 Plugin 'vim-airline/vim-airline'
 Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'tpope/vim-unimpaired'
+
+" Better python code folding
+Plugin 'tmhedberg/SimpylFold'
 
 " undotree stuff
 Plugin 'mbbill/undotree'
@@ -123,27 +140,27 @@ noremap k gk
 let g:rainbow_active = 1
 
 let g:rainbow_conf = {
-\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-\   'operators': '_,_',
-\   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\   'separately': {
-\       '*': {},
-\       'tex': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-\       },
-\       'lisp': {
-\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-\       },
-\       'vim': {
-\           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-\       },
-\       'html': {
-\           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
-\       },
-\       'css': 0,
-\   }
-\}
+            \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+            \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+            \   'operators': '_,_',
+            \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+            \   'separately': {
+            \       '*': {},
+            \       'tex': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+            \       },
+            \       'lisp': {
+            \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+            \       },
+            \       'vim': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+            \       },
+            \       'html': {
+            \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+            \       },
+            \       'css': 0,
+            \   }
+            \}
 
 set background=dark
 
@@ -160,14 +177,31 @@ set magic
 set updatecount=25
 
 " This is for syntastic to work properly for syntax checking
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
+" press Sd to disable syntastic
+""    :command Sd SyntasticToggleMode
+""    set statusline+=%#warningmsg#
+""    set statusline+=%{SyntasticStatuslineFlag()}
+""    set statusline+=%*
+""
+""    let g:syntastic_always_populate_loc_list = 1
+""    let g:syntastic_auto_loc_list = 1
+""    let g:syntastic_check_on_open = 1
+""    let g:syntastic_check_on_wq = 0
+""
+""    function Py2()
+""      let g:syntastic_python_python_exec = '/usr/local/bin/python2'
+""    endfunction
+""
+""    function Py3()
+""      let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+""    endfunction
+""
+""    call Py3()   " default to Py3 because I try to use it when possible
+" Actually, lets use ale for syntax checking and autocomplete instead.
+"let g:ale_completion_enabled = 1
+let g:airline#extentions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:deoplete#enable_at_startup = 1
 
 " Autocomplete for CSS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -187,16 +221,16 @@ set viminfo='100,<500,s50
 
 "Persistent Undo
 if has('persistent_undo')
-		set undolevels=5000
-		set undodir=$HOME/.VIM_UNDO_FILES
-		set undofile
+    set undolevels=5000
+    set undodir=$HOME/.VIM_UNDO_FILES
+    set undofile
 endif
-		
+
 " map <esc> and <C-[> to exit terminal mode on neovim
 if has ('nvim')
-		tnoremap <Esc> <C-\><C-n>
-		tnoremap <C-[]> <C-\><C-n>
-		set mouse=
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-[]> <C-\><C-n>
+    set mouse=
     let g:deoplete#enable_at_startup = 1
 endif
 
@@ -233,85 +267,85 @@ let g:python_version_2 = 0
 " Never type the same word twice and maybe learn a new spellings!
 " Window users can copy the file to their machine.
 function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
+    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+        return "\<C-N>"
+    else
+        return "\<Tab>"
+    endif
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
 "testing stuff
-		" For jpegs
-		autocmd BufReadPre *.jpg,*.jpeg silent set ro
-		autocmd BufReadPost *.jpg,*.jpeg silent %!jp2a --width=78 "%"
-		" " For other image formats
-		autocmd BufReadPre *.png,*.gif,*.bmp silent set ro
-		autocmd BufReadPost *.png,*.gif,*.bmp silent %!convert "%" jpg:- | jp2a --width=78 -
+" For jpegs
+autocmd BufReadPre *.jpg,*.jpeg silent set ro
+autocmd BufReadPost *.jpg,*.jpeg silent %!jp2a --width=78 "%"
+" " For other image formats
+autocmd BufReadPre *.png,*.gif,*.bmp silent set ro
+autocmd BufReadPost *.png,*.gif,*.bmp silent %!convert "%" jpg:- | jp2a --width=78 -
 
-		"multiple column scrolling cool thingy
-		fun! s:scroll()
-				let l:save = &scrolloff
-				set scrolloff=0 noscrollbind nowrap nofoldenable
-				botright vsplit
-				normal L
-				normal j
-				normal zt
-				setlocal scrollbind
-				exe "normal \<c-w>p"
-				setlocal scrollbind
+"multiple column scrolling cool thingy
+fun! s:scroll()
+    let l:save = &scrolloff
+    set scrolloff=0 noscrollbind nowrap nofoldenable
+    botright vsplit
+    normal L
+    normal j
+    normal zt
+    setlocal scrollbind
+    exe "normal \<c-w>p"
+    setlocal scrollbind
 
-				let &scrolloff = l:save
-		endfun
-		command! Scroll call s:scroll()
+    let &scrolloff = l:save
+endfun
+command! Scroll call s:scroll()
 
-		"weird rotate line screensaver
-		"Press \r to start rotating lines and <C-c> (Control+c) to stop.
-		function! s:RotateString(string)
-			let split_string = split(a:string, '\zs')
-			return join(split_string[-1:] + split_string[:-2], '')
-		endfunction
+"weird rotate line screensaver
+"Press \r to start rotating lines and <C-c> (Control+c) to stop.
+function! s:RotateString(string)
+    let split_string = split(a:string, '\zs')
+    return join(split_string[-1:] + split_string[:-2], '')
+endfunction
 
-		function! s:RotateLine(line, leading_whitespace, trailing_whitespace)
-			return substitute(
-				\ a:line,
-				\ '^\(' . a:leading_whitespace . '\)\(.\{-}\)\(' . a:trailing_whitespace . '\)$',
-				\ '\=submatch(1) . <SID>RotateString(submatch(2)) . submatch(3)',
-				\ ''
-			\ )
-		endfunction
+function! s:RotateLine(line, leading_whitespace, trailing_whitespace)
+    return substitute(
+                \ a:line,
+                \ '^\(' . a:leading_whitespace . '\)\(.\{-}\)\(' . a:trailing_whitespace . '\)$',
+                \ '\=submatch(1) . <SID>RotateString(submatch(2)) . submatch(3)',
+                \ ''
+                \ )
+endfunction
 
-		function! s:RotateLines()
-			let saved_view = winsaveview()
-			let first_visible_line = line('w0')
-			let last_visible_line = line('w$')
-			let lines = getline(first_visible_line, last_visible_line)
-			let leading_whitespace = map(
-				\ range(len(lines)),
-				\ 'matchstr(lines[v:val], ''^\s*'')'
-			\ )
-			let trailing_whitespace = map(
-				\ range(len(lines)),
-				\ 'matchstr(lines[v:val], ''\s*$'')'
-			\ )
-			try
-				while 1 " <C-c> to exit
-					let lines = map(
-						\ range(len(lines)),
-						\ '<SID>RotateLine(lines[v:val], leading_whitespace[v:val], trailing_whitespace[v:val])'
-					\ )
-					call setline(first_visible_line, lines)
-					redraw
-					sleep 50m
-				endwhile
-			finally
-				if &modified
-					silent undo
-				endif
-				call winrestview(saved_view)
-			endtry
-		endfunction
+function! s:RotateLines()
+    let saved_view = winsaveview()
+    let first_visible_line = line('w0')
+    let last_visible_line = line('w$')
+    let lines = getline(first_visible_line, last_visible_line)
+    let leading_whitespace = map(
+                \ range(len(lines)),
+                \ 'matchstr(lines[v:val], ''^\s*'')'
+                \ )
+    let trailing_whitespace = map(
+                \ range(len(lines)),
+                \ 'matchstr(lines[v:val], ''\s*$'')'
+                \ )
+    try
+        while 1 " <C-c> to exit
+            let lines = map(
+                        \ range(len(lines)),
+                        \ '<SID>RotateLine(lines[v:val], leading_whitespace[v:val], trailing_whitespace[v:val])'
+                        \ )
+            call setline(first_visible_line, lines)
+            redraw
+            sleep 50m
+        endwhile
+    finally
+        if &modified
+            silent undo
+        endif
+        call winrestview(saved_view)
+    endtry
+endfunction
 
-		nnoremap <silent> <Plug>(RotateLines) :<C-u>call <SID>RotateLines()<CR>
+nnoremap <silent> <Plug>(RotateLines) :<C-u>call <SID>RotateLines()<CR>
 
-		nmap \r <Plug>(RotateLines)
+nmap \r <Plug>(RotateLines)
