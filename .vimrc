@@ -53,6 +53,13 @@ else
     Plugin 'roxma/vim-hug-neovim-rpc'
 endif
 
+" Deoplete PHP
+Plugin 'phpactor/phpactor'
+Plugin 'kristijanhusak/deoplete-phpactor'
+
+" Deoplete many languages
+Plugin 'Shougo/neco-syntax'
+
 " Other plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
