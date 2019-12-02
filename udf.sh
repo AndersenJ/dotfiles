@@ -15,7 +15,9 @@ mkdir ~/.i3 2> /dev/null
 mkdir ~/.config 2> /dev/null
 mkdir ~/.config/xfce4 2> /dev/null
 mkdir ~/.config/xfce4/terminal 2> /dev/null
+mkdir ~/.config/sway 2> /dev/null
 cp ~/dotfiles/.i3/config ~/.i3/config
+cp ~/dotfiles/.config/sway/config ~/.config/sway/config
 cp ~/dotfiles/.vimrc ~/
 cp ~/dotfiles/.bashrc ~/
 cp ~/dotfiles/.emacs ~/
