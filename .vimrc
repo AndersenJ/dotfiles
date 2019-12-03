@@ -93,6 +93,12 @@ set autoindent
 " turn on line numbering
 set number
 
+" enable true colors
+if &term =~# '^screen'
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 " tell delimitmate to not screw up my LISP
 au FileType lisp let b:delimitMate_quotes = "\""
 
