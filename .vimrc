@@ -1,93 +1,86 @@
-" to install Vundle, run git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" needed to run vundle{ set nocompatible filetype plugin indent off
 syntax off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"list of plugins
-"to install/update/delete a plugin, add it here and run
-":PluginInstall/:PluginUpdate/:PluginClean
- 
-" Vundle Plugin
-Plugin 'VundleVim/Vundle.vim'
-
-" Support for various languages
-Plugin 'groenewege/vim-less'
-Plugin 'adamclerk/vim-razor'
-Plugin 'elzr/vim-json'
-Plugin 'isRuslan/vim-es6'
-Plugin 'pangloss/vim-javascript'
-Plugin 'hail2u/vim-css3-syntax.git'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'digitaltoad/vim-pug'
-Plugin 'kovisoft/slimv'
-Plugin 'lervag/vimtex'
-Plugin 'JuliaLang/julia-vim'
-Plugin 'sirtaj/vim-openscad'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'nvie/vim-flake8'
-Plugin 'vim-python/python-syntax'
-
-" Rainbow Parentheses
-Plugin 'luochen1990/rainbow'
-
-" Indent Guides
-Plugin 'nathanaelkane/vim-indent-guides.git'
-
-" Autocomplete; deoplete for nvim and youcompleteme for vim
-" Plugin 'Shougo/deoplete.nvim'
-" Plugin 'Valloric/YouCompleteMe'
-" Note that Valloric YouCompleteMe needs to be compiled. Use:
-" First, install cmake, python, nodejs, and npm
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --clang-completer --omnisharp-completer --gocode-completer
-
-" Syntax highlighting
-" Plugin 'scrooloose/syntastic'
-Plugin 'dense-analysis/ale'
-
-if has('nvim')
-    Plugin 'Shougo/deoplete.nvim'
-else
-    Plugin 'Shougo/deoplete.nvim'
-    Plugin 'roxma/nvim-yarp'
-    Plugin 'roxma/vim-hug-neovim-rpc'
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+call plug#begin('~/.vim/plugged')
+"list of plugins
+"to install/update/delete a plugin, add it here and run
+":PlugInstall/:PlugUpdate/:PlugClean
+"run :PlugUpgrade to update vim-plug itself
+
+" Support for various languages
+Plug 'groenewege/vim-less'
+Plug 'adamclerk/vim-razor'
+Plug 'elzr/vim-json'
+Plug 'isRuslan/vim-es6'
+Plug 'pangloss/vim-javascript'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'leafgarland/typescript-vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'kovisoft/slimv'
+Plug 'lervag/vimtex'
+Plug 'JuliaLang/julia-vim'
+Plug 'sirtaj/vim-openscad'
+Plug 'StanAngeloff/php.vim'
+Plug 'nvie/vim-flake8'
+Plug 'vim-python/python-syntax'
+
+" Rainbow Parentheses
+Plug 'luochen1990/rainbow'
+
+" Indent Guides
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Autocomplete; deoplete for nvim and youcompleteme for vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'Shougo/deoplete.nvim'
 " Deoplete PHP
-Plugin 'phpactor/phpactor'
-Plugin 'kristijanhusak/deoplete-phpactor'
+"Plug 'phpactor/phpactor'
+"Plug 'kristijanhusak/deoplete-phpactor'
 
 " Deoplete many languages
-Plugin 'Shougo/neco-syntax'
+"Plug 'Shougo/neco-syntax'
+
+"if has('nvim')
+    "Plug 'Shougo/deoplete.nvim'
+"else
+    "Plug 'Shougo/deoplete.nvim'
+    "Plug 'roxma/nvim-yarp'
+    "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+
+" Error checking
+Plug 'dense-analysis/ale'
 
 " Other plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'Yggdroot/indentLine.git'
-Plugin 'Raimondi/delimitMate.git'
-Plugin 'airblade/vim-rooter.git'
-Plugin 'adragomir/javacomplete'
-Plugin 'whatyouhide/vim-gotham'
-Plugin 'vim-airline/vim-airline'
-Plugin 'severin-lemaignan/vim-minimap'
-Plugin 'tpope/vim-unimpaired'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'flazz/vim-colorschemes'
+Plug 'Yggdroot/indentLine'
+Plug 'Raimondi/delimitMate'
+Plug 'airblade/vim-rooter'
+Plug 'adragomir/javacomplete'
+Plug 'whatyouhide/vim-gotham'
+Plug 'vim-airline/vim-airline'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'tpope/vim-unimpaired'
 
 " Better python code folding
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 
 " undotree stuff
-Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 
-call vundle#end()
-"}
+call plug#end()
 "There may also be other plugins that
 "require additional setup.
 
-filetype plugin indent on
 set autoindent
 
 " turn on line numbering
@@ -247,6 +240,23 @@ if has ('nvim')
     let g:deoplete#enable_at_startup = 1
 endif
 
+" Some stuff recommended by coc
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+"use <CR> to select completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"use K to show documentation in preview window
+function! s:show_documentation()
+	if (index(['vim','help'], &filetype) >= 0)
+		execute 'h '.expand('<cword>')
+	else
+		call CocAction('doHover')
+	endif
+endfunction
+
+
 " show relative numbers
 set relativenumber
 
@@ -280,11 +290,11 @@ let g:python_version_2 = 0
 " Never type the same word twice and maybe learn a new spellings!
 " Window users can copy the file to their machine.
 function! Tab_Or_Complete()
-    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-        return "\<C-N>"
-    else
-        return "\<Tab>"
-    endif
+	if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+		return "\<C-N>"
+	else
+		return "\<Tab>"
+	endif
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
@@ -298,65 +308,65 @@ autocmd BufReadPost *.png,*.gif,*.bmp silent %!convert "%" jpg:- | jp2a --width=
 
 "multiple column scrolling cool thingy
 fun! s:scroll()
-    let l:save = &scrolloff
-    set scrolloff=0 noscrollbind nowrap nofoldenable
-    botright vsplit
-    normal L
-    normal j
-    normal zt
-    setlocal scrollbind
-    exe "normal \<c-w>p"
-    setlocal scrollbind
+	let l:save = &scrolloff
+	set scrolloff=0 noscrollbind nowrap nofoldenable
+	botright vsplit
+	normal L
+	normal j
+	normal zt
+	setlocal scrollbind
+	exe "normal \<c-w>p"
+	setlocal scrollbind
 
-    let &scrolloff = l:save
+	let &scrolloff = l:save
 endfun
 command! Scroll call s:scroll()
 
 "weird rotate line screensaver
 "Press \r to start rotating lines and <C-c> (Control+c) to stop.
 function! s:RotateString(string)
-    let split_string = split(a:string, '\zs')
-    return join(split_string[-1:] + split_string[:-2], '')
+	let split_string = split(a:string, '\zs')
+	return join(split_string[-1:] + split_string[:-2], '')
 endfunction
 
 function! s:RotateLine(line, leading_whitespace, trailing_whitespace)
-    return substitute(
-                \ a:line,
-                \ '^\(' . a:leading_whitespace . '\)\(.\{-}\)\(' . a:trailing_whitespace . '\)$',
-                \ '\=submatch(1) . <SID>RotateString(submatch(2)) . submatch(3)',
-                \ ''
-                \ )
+	return substitute(
+				\ a:line,
+				\ '^\(' . a:leading_whitespace . '\)\(.\{-}\)\(' . a:trailing_whitespace . '\)$',
+				\ '\=submatch(1) . <SID>RotateString(submatch(2)) . submatch(3)',
+				\ ''
+				\ )
 endfunction
 
 function! s:RotateLines()
-    let saved_view = winsaveview()
-    let first_visible_line = line('w0')
-    let last_visible_line = line('w$')
-    let lines = getline(first_visible_line, last_visible_line)
-    let leading_whitespace = map(
-                \ range(len(lines)),
-                \ 'matchstr(lines[v:val], ''^\s*'')'
-                \ )
-    let trailing_whitespace = map(
-                \ range(len(lines)),
-                \ 'matchstr(lines[v:val], ''\s*$'')'
-                \ )
-    try
-        while 1 " <C-c> to exit
-            let lines = map(
-                        \ range(len(lines)),
-                        \ '<SID>RotateLine(lines[v:val], leading_whitespace[v:val], trailing_whitespace[v:val])'
-                        \ )
-            call setline(first_visible_line, lines)
-            redraw
-            sleep 50m
-        endwhile
-    finally
-        if &modified
-            silent undo
-        endif
-        call winrestview(saved_view)
-    endtry
+	let saved_view = winsaveview()
+	let first_visible_line = line('w0')
+	let last_visible_line = line('w$')
+	let lines = getline(first_visible_line, last_visible_line)
+	let leading_whitespace = map(
+				\ range(len(lines)),
+				\ 'matchstr(lines[v:val], ''^\s*'')'
+				\ )
+	let trailing_whitespace = map(
+				\ range(len(lines)),
+				\ 'matchstr(lines[v:val], ''\s*$'')'
+				\ )
+	try
+		while 1 " <C-c> to exit
+			let lines = map(
+						\ range(len(lines)),
+						\ '<SID>RotateLine(lines[v:val], leading_whitespace[v:val], trailing_whitespace[v:val])'
+						\ )
+			call setline(first_visible_line, lines)
+			redraw
+			sleep 50m
+		endwhile
+	finally
+		if &modified
+			silent undo
+		endif
+		call winrestview(saved_view)
+	endtry
 endfunction
 
 nnoremap <silent> <Plug>(RotateLines) :<C-u>call <SID>RotateLines()<CR>

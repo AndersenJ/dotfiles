@@ -31,4 +31,4 @@ cp ~/dotfiles/.muttrc ~/
 cp ~/dotfiles/.aliases.sh ~/
 #cp ~/dotfiles/.zshrc ~/
 #cp ~/dotfiles/.omzshrc ~/.zshrc
-vim +PluginClean +PluginUpdate +qall
+#vim +PlugClean +PlugUpdate +qall
