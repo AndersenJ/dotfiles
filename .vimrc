@@ -27,6 +27,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'StanAngeloff/php.vim'
 Plug 'nvie/vim-flake8'
 Plug 'vim-python/python-syntax'
+Plug 'posva/vim-vue'
 
 " Rainbow Parentheses
 Plug 'luochen1990/rainbow'
