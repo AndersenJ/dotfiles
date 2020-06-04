@@ -54,7 +54,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "endif
 
 " Error checking
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " Other plugins
 Plug 'scrooloose/nerdtree'
@@ -112,14 +112,12 @@ set hls
 set lbr
 
 "change colorscheme
-"colo ansi_blows
 "colo af
-"colo candy
-"colo basic
 "colo buttercream
-colo desert
+"colo desert
 "colo gotham
 "colo turbo
+colo dracula
 
 "tab width
 set tabstop=4
@@ -262,8 +260,8 @@ endfunction
 set relativenumber
 
 " folding settings
-set foldmethod=syntax
-set fdn=6
+"set foldmethod=syntax
+"set fdn=6
 
 " jj to exit insert mode
 map! jj <Esc>
