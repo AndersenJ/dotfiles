@@ -35,6 +35,9 @@ Plug 'luochen1990/rainbow'
 " Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
 
+" Allows you to replace the quotes or tags that surround a word
+Plug 'tpope/vim-surround'
+
 " Autocomplete; deoplete for nvim and youcompleteme for vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'Shougo/deoplete.nvim'
