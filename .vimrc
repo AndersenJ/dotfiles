@@ -59,6 +59,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Error checking
 "Plug 'dense-analysis/ale'
 
+" Git integration; use :Git instead of :!git
+Plug 'tpope/vim-fugitive'
+
 " Other plugins
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
