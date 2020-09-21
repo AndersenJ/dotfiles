@@ -85,6 +85,9 @@ call plug#end()
 "There may also be other plugins that
 "require additional setup.
 
+" Set vim to actually use LaTeX specifically instead of plain TeX or ConTeXt
+let g:tex_flavor = 'latex'
+
 set autoindent
 
 " turn on line numbering
