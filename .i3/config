@@ -207,14 +207,15 @@ hide_edge_borders none
 # on startup
 
 exec --no-startup-id "pulseaudio --start"
-
-
-
+exec --no-startup-id "blueman-applet"
 
 # multimedia keys
-bindsym XF86AudioRaiseVolume    exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume    exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute           exec "amixer -q sset Master,0 toggle"
+bindsym XF86AudioRaiseVolume    exec "pactl set-sink-volume @DEFAULT_SINK@ +1%"
+bindsym XF86AudioLowerVolume    exec "pactl set-sink-volume @DEFAULT_SINK@ -1%"
+#bindsym XF86AudioRaiseVolume    exec "amixer -q sset Master,0 1+ unmute"
+#bindsym XF86AudioLowerVolume    exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioMute           exec "pactl set-sink @DEFAULT_SINK@ toggle"
+#bindsym XF86AudioMute           exec "amixer -q sset Master,0 toggle"
 bindsym XF86AudioPlay           exec "cmus-remote -u"
 bindsym XF86AudioStop           exec "cmus-remote -s"
 bindsym XF86AudioPrev           exec "cmus-remote -r"
@@ -257,6 +258,7 @@ exec feh --bg-scale /home/johnathan/A1.jpg
 
 # Specific workspace config
 
+assign [class="steam"] $tag3
 #assign [class="URxvt"] $tag4
 #assign [class="Pcmanfm"] $tag5
 #assign [class="Lxappearance"] $tag5
