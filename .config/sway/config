@@ -25,9 +25,9 @@ set $menu fuzzel | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # You can use wdisplays for hints towards these values.
-output DP-2 adaptive_sync on mode 2560x1440@144Hz pos 1080 450 bg ~/images/todou.jpg fit
-output DP-3 mode 2560x1440@144Hz pos 3640 0 bg ~/images/todou.jpg fit
-output HDMI-A-1 transform 270 mode 1920x1080@60Hz pos 0 900 bg ~/images/todou.jpg fit
+output DP-2 adaptive_sync on mode 2560x1440@144Hz pos 1080 450 bg ~/images/todou2.png fit
+output DP-3 mode 2560x1440@144Hz pos 3640 0 bg ~/images/todou5.png fit
+output HDMI-A-1 transform 270 mode 1920x1080@60Hz pos 0 900 bg ~/images/todou3.png fit
 #
 # Example configuration:
 #
@@ -74,6 +74,20 @@ output HDMI-A-1 transform 270 mode 1920x1080@60Hz pos 0 900 bg ~/images/todou.jp
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    bindsym $mod+o exec firefox
+    bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
+    bindsym $mod+z exec pcmanfm
+    
+    # multimedia keys
+    bindsym XF86AudioRaiseVolume    exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
+    bindsym XF86AudioLowerVolume    exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+    bindsym XF86AudioMute           exec "pactl set-sink @DEFAULT_SINK@ toggle"
+    bindsym XF86AudioPlay           exec 'cmus-remote -u'
+    bindsym XF86AudioStop           exec 'cmus-remote -s'
+    bindsym XF86AudioPrev           exec 'cmus-remote -r'
+    bindsym XF86AudioNext           exec 'cmus-remote -n'
+
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -227,5 +241,12 @@ bar {
 
 # Launch notification daemon
 exec mako
+
+# Launch applets
+exec "blueman-applet"
+exec "pasystray"
+
+# Launch polkit daemon
+exec "/usr/lib/polkit-kde-authentication-agent-1"
 
 include /etc/sway/config.d/*
