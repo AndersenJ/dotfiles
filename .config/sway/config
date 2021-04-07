@@ -249,4 +249,7 @@ exec "pasystray"
 # Launch polkit daemon
 exec "/usr/lib/polkit-kde-authentication-agent-1"
 
+# Launch sworkstyle for fancy workspace names
+exec sworkstyle &> /tmp/sworkstyle.log
+
 include /etc/sway/config.d/*
