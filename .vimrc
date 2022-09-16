@@ -67,7 +67,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
 Plug 'flazz/vim-colorschemes'
 Plug 'Yggdroot/indentLine'
 Plug 'Raimondi/delimitMate'
@@ -126,7 +125,6 @@ set lbr
 "colo desert
 "colo gotham
 "colo turbo
-colo dracula
 
 "tab width
 set tabstop=4
